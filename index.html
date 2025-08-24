@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Thumbnail Design Portfolio</title>
     
-    <!-- SEO & Social Sharing Meta Tags -->
-    <meta name="description" content="Custom YouTube Thumbnail Designer – Boost your CTR and views with eye-catching thumbnails.">
-    <meta property="og:title" content="Professional YouTube Thumbnail Design">
-    <meta property="og:description" content="Get thumbnails that convert viewers into clicks. Free sample included.">
-    <meta property="og:image" content="https://placehold.co/1200x630/1a1a2a/8A2BE2?text=Click-Worthy+Thumbnails">
+    <!-- 1. Branding & SEO -->
+    <title>Meet Thummar — YouTube Thumbnail Designer | High CTR Thumbnails</title>
+    <meta name="description" content="Professional YouTube thumbnail designer. High-CTR thumbnails that demand clicks. Order single, bulk, or monthly packages.">
+
+    <!-- 9. Social Sharing Meta Tags -->
+    <meta property="og:title" content="Meet Thummar — Professional YouTube Thumbnail Designer">
+    <meta property="og:description" content="Get high-CTR thumbnails that demand clicks and boost your views. Free sample available.">
+    <meta property="og:image" content="https://placehold.co/1200x630/1a1a2a/8A2BE2?text=Made+by+Meet">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meet Thummar — Professional YouTube Thumbnail Designer">
+    <meta name="twitter:description" content="Get high-CTR thumbnails that demand clicks and boost your views. Free sample available.">
+    <meta name="twitter:image" content="https://placehold.co/1200x630/1a1a2a/8A2BE2?text=Made+by+Meet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,11 +26,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Custom Styles -->
     <style>
+        @keyframes subtle-gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #1a1a2a; /* Deep purple-blue background */
-            background-image: radial-gradient(circle at top left, rgba(138, 43, 226, 0.3), transparent 40%),
-                              radial-gradient(circle at bottom right, rgba(0, 255, 255, 0.3), transparent 40%);
+            background-color: #1a1a2a;
+            background: linear-gradient(-45deg, #1a1a2a, #3c1a4a, #1a2a3a, #1a1a2a);
+            background-size: 400% 400%;
+            animation: subtle-gradient 15s ease infinite;
             color: #f0f0f0;
             padding-bottom: 80px;
         }
@@ -48,278 +60,163 @@
             box-shadow: 0 8px 25px rgba(65, 105, 225, 0.5);
         }
         
+        .standout-cta {
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+        }
+        .standout-cta:hover {
+            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.5);
+        }
+
         .secondary-cta {
              background: linear-gradient(90deg, #434343, #000000);
         }
 
-        .glow-badge {
-            background: #8A2BE2;
-            box-shadow: 0 0 15px 2px rgba(138, 43, 226, 0.6);
-        }
-
-        /* Image Comparison Slider Styles */
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        .comparison-slider img {
+        .pricing-badge {
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            pointer-events: none;
-        }
-        .comparison-slider .after-image {
-            clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-        }
-        .comparison-slider .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 100%;
-            width: 4px;
-            background-color: white;
-            cursor: ew-resize;
-            z-index: 10;
-        }
-        .comparison-slider .slider-handle::after {
-            content: '';
-            position: absolute;
-            top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            border: 2px solid white;
-            border-radius: 50%;
-            background-color: rgba(138, 43, 226, 0.7);
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14l-4 4 4 4"/><path d="M16 14l4 4-4 4"/><path d="M4 10l4-4-4-4"/><path d="M20 10l-4-4 4-4"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            color: white;
         }
+        .badge-popular { background: #8A2BE2; box-shadow: 0 0 15px 2px rgba(138, 43, 226, 0.6); }
+        .badge-value { background: #ef4444; box-shadow: 0 0 15px 2px rgba(239, 68, 68, 0.6); }
+
+        .comparison-slider { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 0.5rem; border: 2px solid rgba(255, 255, 255, 0.2); }
+        .comparison-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+        .comparison-slider .after-image { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
+        .comparison-slider .slider-handle { position: absolute; top: 0; left: 50%; transform: translateX(-50%); height: 100%; width: 4px; background-color: white; cursor: ew-resize; z-index: 10; }
+        .comparison-slider .slider-handle::after { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; border: 2px solid white; border-radius: 50%; background-color: rgba(138, 43, 226, 0.7); background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 14l-4 4 4 4"/><path d="M16 14l4 4-4 4"/><path d="M4 10l4-4-4-4"/><path d="M20 10l-4-4 4-4"/></svg>'); background-repeat: no-repeat; background-position: center; }
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- Header / Navigation -->
-    <header class="py-4 px-6 md:px-12">
+    <header id="header" class="py-4 px-6 md:px-12 sticky top-0 z-50 transition-all duration-300">
         <nav class="flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-white tracking-wider">THUMBNAIL.IO</h1>
-            <a href="#contact" class="cta-button text-white font-semibold py-2 px-6 rounded-full">
-                Contact
-            </a>
+            <a href="#home" class="text-3xl font-bold text-white tracking-wider">Made by Meet</a>
+            <div class="hidden md:flex items-center space-x-8 text-white">
+                <a href="#home" class="hover:text-cyan-400">Home</a>
+                <a href="#pricing" class="hover:text-cyan-400">Pricing</a>
+                <a href="#portfolio" class="hover:text-cyan-400">Samples</a>
+                <a href="#testimonials" class="hover:text-cyan-400">Testimonials</a>
+                <a href="#contact" class="cta-button text-white font-semibold py-2 px-6 rounded-full">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
         </nav>
+        <div id="menu" class="hidden md:hidden flex-col items-center space-y-4 mt-4 glass-card p-6">
+            <a href="#home" class="block text-white hover:text-cyan-400">Home</a>
+            <a href="#pricing" class="block text-white hover:text-cyan-400">Pricing</a>
+            <a href="#portfolio" class="block text-white hover:text-cyan-400">Samples</a>
+            <a href="#testimonials" class="block text-white hover:text-cyan-400">Testimonials</a>
+            <a href="#contact" class="block cta-button text-white font-semibold py-2 px-6 rounded-full w-full text-center">Contact</a>
+        </div>
     </header>
 
     <main>
-        <!-- 1) HERO SECTION -->
-        <section id="home" class="text-center py-24 px-4">
+        <section id="home" class="text-center pt-16 pb-24 px-4">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl md:text-7xl font-black text-white leading-tight uppercase">
                     Thumbnails That <span style="background: linear-gradient(90deg, #8A2BE2, #4169E1); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Demand</span> a Click
                 </h1>
-                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-                    I design high-CTR YouTube thumbnails that stop the scroll and convert viewers into fans.
+                <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+                    Boost your YouTube CTR with scroll-stopping custom thumbnails.
                 </p>
                 <a href="#pricing" class="cta-button inline-block mt-10 text-white font-bold py-4 px-10 text-lg rounded-full">
                     View Packages
                 </a>
-                <a href="#contact" class="mt-6 block text-cyan-400 hover:text-cyan-300 font-semibold">
+                <a href="https://wa.me/917574006566?text=Hello%20Meet,%20I%20want%20to%20try%20the%20free%20sample%20thumbnail." target="_blank" class="mt-6 block text-cyan-400 hover:text-cyan-300 font-semibold">
                     Or claim your free sample →
                 </a>
             </div>
-
-            <!-- Thumbnail Collage -->
             <div class="mt-20 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-                <img src="https://placehold.co/1280x720/1a1a2a/ffffff?text=Style+1" alt="Thumbnail example 1" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 hover:shadow-cyan-400/30">
-                <img src="https://placehold.co/1280x720/2d3748/ffffff?text=Style+2" alt="Thumbnail example 2" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 mt-8 hover:shadow-blue-400/30">
-                <img src="https://placehold.co/1280x720/4a5568/ffffff?text=Style+3" alt="Thumbnail example 3" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 hover:shadow-purple-400/30">
-                <img src="https://placehold.co/1280x720/718096/ffffff?text=Style+4" alt="Thumbnail example 4" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 mt-8 hover:shadow-pink-400/30">
-            </div>
-            
-            <!-- Trust Logos Section -->
-            <div class="mt-24 max-w-4xl mx-auto px-4">
-                <p class="text-center text-gray-400 uppercase tracking-widest text-sm">Powering content for creators on</p>
-                <div class="flex justify-center items-center space-x-6 opacity-70 mt-4">
-                    <svg class="h-10 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                </div>
+                <img loading="lazy" src="https://placehold.co/1280x720/1a1a2a/ffffff?text=Style+1" alt="Thumbnail example 1" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 hover:shadow-cyan-400/30">
+                <img loading="lazy" src="https://placehold.co/1280x720/2d3748/ffffff?text=Style+2" alt="Thumbnail example 2" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 mt-8 hover:shadow-blue-400/30">
+                <img loading="lazy" src="https://placehold.co/1280x720/4a5568/ffffff?text=Style+3" alt="Thumbnail example 3" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 hover:shadow-purple-400/30">
+                <img loading="lazy" src="https://placehold.co/1280x720/718096/ffffff?text=Style+4" alt="Thumbnail example 4" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 mt-8 hover:shadow-pink-400/30">
             </div>
         </section>
 
-        <!-- 2) PORTFOLIO SECTION -->
         <section id="portfolio" class="py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">The Transformation</h2>
                 <div class="grid md:grid-cols-2 gap-12">
-                    <!-- Slider 1 -->
-                    <div class="glass-card p-6">
-                        <div class="comparison-slider">
-                            <img src="https://placehold.co/1280x720/4a5568/a0aec0?text=Original" alt="Before thumbnail" class="before-image">
-                            <img src="https://placehold.co/1280x720/8A2BE2/ffffff?text=Redesigned!" alt="After thumbnail" class="after-image">
-                            <div class="slider-handle"></div>
-                        </div>
-                        <p class="text-center mt-4 text-gray-300">Boosted readability and visual impact.</p>
-                    </div>
-                    <!-- Slider 2 -->
-                    <div class="glass-card p-6">
-                        <div class="comparison-slider">
-                            <img src="https://placehold.co/1280x720/52525b/a1a1aa?text=Old+Version" alt="Before thumbnail" class="before-image">
-                            <img src="https://placehold.co/1280x720/4169E1/ffffff?text=New+%26+Bold" alt="After thumbnail" class="after-image">
-                            <div class="slider-handle"></div>
-                        </div>
-                        <p class="text-center mt-4 text-gray-300">Created a stronger focal point and appeal.</p>
-                    </div>
+                    <div class="glass-card p-6"><div class="comparison-slider"><img loading="lazy" src="https://placehold.co/1280x720/4a5568/a0aec0?text=Original" alt="Before thumbnail" class="before-image"><img loading="lazy" src="https://placehold.co/1280x720/8A2BE2/ffffff?text=Redesigned!" alt="After thumbnail" class="after-image"><div class="slider-handle"></div></div><p class="text-center mt-4 text-gray-300">Boosted readability and visual impact.</p></div>
+                    <div class="glass-card p-6"><div class="comparison-slider"><img loading="lazy" src="https://placehold.co/1280x720/52525b/a1a1aa?text=Old+Version" alt="Before thumbnail" class="before-image"><img loading="lazy" src="https://placehold.co/1280x720/4169E1/ffffff?text=New+%26+Bold" alt="After thumbnail" class="after-image"><div class="slider-handle"></div></div><p class="text-center mt-4 text-gray-300">Created a stronger focal point and appeal.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- 3) WHY CHOOSE ME SECTION -->
-        <section id="why-me" class="py-24">
-            <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-4xl font-bold text-white mb-8">Why a Great Thumbnail is Non-Negotiable</h2>
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <div class="p-2 bg-blue-500/20 rounded-full mr-4 mt-1"><svg class="w-6 h-6 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
-                            <div>
-                                <h3 class="text-xl font-semibold">Clicks = Views</h3>
-                                <p class="text-gray-300">A great thumbnail can double or triple your reach by grabbing attention instantly.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <div class="p-2 bg-blue-500/20 rounded-full mr-4 mt-1"><svg class="w-6 h-6 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                            <div>
-                                <h3 class="text-xl font-semibold">Stand Out</h3>
-                                <p class="text-gray-300">Beat competitors in crowded niches with a design that's impossible to ignore.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                           <div class="p-2 bg-blue-500/20 rounded-full mr-4 mt-1"><svg class="w-6 h-6 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
-                            <div>
-                                <h3 class="text-xl font-semibold">Save Time</h3>
-                                <p class="text-gray-300">Focus on creating amazing content. I'll handle the design that gets it seen.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-card p-8">
-                    <h3 class="text-2xl font-bold text-white">A Note From Me</h3>
-                    <p class="mt-4 text-gray-300">
-                        I’m a dedicated YouTube thumbnail designer. Unlike general designers, I specialize ONLY in thumbnails — the #1 driver of YouTube success. My focus is singular: creating designs that stop the scroll and earn the click.
-                    </p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- WHO WE ARE SECTION (CREATOR VERSION) -->
-        <section id="about-me" class="py-24">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <h2 class="text-4xl md:text-5xl font-extrabold text-white">
-                    Thumbnails Handcrafted by a Creator Who Knows Clicks
-                </h2>
-                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto">
-                    I’m Meet — I design thumbnails, banners, and visuals that grab attention and make people click. Every design is unique, tailored, and built to help your content stand out.
-                </p>
-                <a href="#contact" class="cta-button inline-block mt-8 text-white font-bold py-4 px-10 text-lg rounded-full">
-                    Work With Me
-                </a>
-            </div>
-        </section>
-
-        <!-- 4) PRICING SECTION -->
         <section id="pricing" class="py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Simple, Transparent Pricing</h2>
                 <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Single Thumbnail -->
-                    <div class="glass-card p-8 text-center flex flex-col">
-                        <h3 class="text-2xl font-bold">Single Thumbnail</h3>
-                        <p class="text-5xl font-extrabold my-4">₹100</p>
-                        <p class="text-gray-400 flex-grow">Perfect for a one-off video.</p>
-                        <a href="#contact" class="secondary-cta cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Order Single</a>
-                    </div>
-                    <!-- 5-Pack (Most Popular) -->
-                    <div class="glass-card p-8 text-center border-2 border-purple-500 relative transform md:scale-105 flex flex-col">
-                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 glow-badge text-white text-sm font-bold px-4 py-1 rounded-full">MOST POPULAR</span>
-                        <h3 class="text-2xl font-bold">5-Pack</h3>
-                        <p class="text-5xl font-extrabold my-4">₹450</p>
-                        <p class="text-gray-400 flex-grow">Save 10% - Great for a content batch.</p>
-                        <a href="#contact" class="cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Order 5-Pack</a>
-                    </div>
-                    <!-- Monthly Subscription -->
-                    <div class="glass-card p-8 text-center flex flex-col">
-                        <h3 class="text-2xl font-bold">Monthly Subscription</h3>
-                        <p class="text-5xl font-extrabold my-4">₹900</p>
-                        <p class="text-gray-400 flex-grow">12 thumbnails - Best value for active creators.</p>
-                        <a href="#contact" class="secondary-cta cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Start Subscription</a>
-                    </div>
+                    <div class="glass-card p-8 text-center flex flex-col"><h3 class="text-2xl font-bold">Single Thumbnail</h3><p class="text-5xl font-extrabold my-4">₹100</p><p class="text-gray-400 flex-grow">Perfect for a one-off video.</p><a href="mailto:fineprinthq@gmail.com?subject=Thumbnail%20Order%20-%20Single&body=Hello%20Meet,%20I%20want%20to%20make%20a%20thumbnail." class="secondary-cta cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Order Single</a></div>
+                    <div class="glass-card p-8 text-center border-2 border-purple-500 relative transform md:scale-105 flex flex-col"><span class="pricing-badge badge-popular">⭐ Popular Choice</span><h3 class="text-2xl font-bold">5-Pack</h3><p class="text-5xl font-extrabold my-4">₹450</p><p class="text-gray-400 flex-grow">Save 10% - Great for a content batch.</p><a href="mailto:fineprinthq@gmail.com?subject=Thumbnail%20Order%20-%205%20Pack&body=Hello%20Meet,%20I%20want%20to%20order%205%20thumbnails." class="cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Order 5 Pack</a></div>
+                    <div class="glass-card p-8 text-center border-2 border-red-500 relative flex flex-col"><span class="pricing-badge badge-value">🔥 Best Value</span><h3 class="text-2xl font-bold">Monthly Subscription</h3><p class="text-5xl font-extrabold my-4">₹900</p><p class="text-gray-400 flex-grow">12 thumbnails, Save 25%</p><a href="mailto:fineprinthq@gmail.com?subject=Thumbnail%20Order%20-%2012%20Pack&body=Hello%20Meet,%20I%20want%20to%20subscribe%20for%2012%20thumbnails%20monthly." class="cta-button mt-6 inline-block w-full text-white font-semibold py-3 rounded-full">Order Subscription</a></div>
                 </div>
             </div>
         </section>
 
-        <!-- 5) TESTIMONIALS SECTION -->
         <section id="testimonials" class="py-24">
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">What Creators Are Saying</h2>
-                <div class="space-y-8">
-                    <div class="glass-card p-6">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="glass-card p-6 flex flex-col">
+                        <div class="flex items-center mb-4"><img src="https://placehold.co/48x48/4169E1/ffffff?text=T" alt="Avatar" class="w-12 h-12 rounded-full mr-4"><div><h4 class="font-bold">TechReviewerPro</h4><p class="text-yellow-400">★★★★★</p></div></div>
                         <p class="text-gray-300 italic">"Amazing quality work! My video CTR improved instantly. The design was exactly what I needed to stand out."</p>
-                        <p class="text-right mt-4 font-semibold text-cyan-400">— TechReviewerPro</p>
                     </div>
-                    <div class="glass-card p-6">
+                    <div class="glass-card p-6 flex flex-col">
+                        <div class="flex items-center mb-4"><img src="https://placehold.co/48x48/8A2BE2/ffffff?text=G" alt="Avatar" class="w-12 h-12 rounded-full mr-4"><div><h4 class="font-bold">GamerX</h4><p class="text-yellow-400">★★★★★</p></div></div>
                         <p class="text-gray-300 italic">"Fast, professional, and understood the vision perfectly. Took my channel's branding to the next level."</p>
-                        <p class="text-right mt-4 font-semibold text-cyan-400">— GamerX</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 6) CALL TO ACTION SECTION -->
-        <section id="contact" class="py-24">
+        <section id="about-me" class="py-24">
             <div class="max-w-4xl mx-auto px-4 text-center glass-card p-12">
-                <h2 class="text-4xl md:text-5xl font-extrabold">Ready to Level Up Your Thumbnails?</h2>
-                <p class="mt-4 text-lg text-gray-300">
-                    Stop losing views to boring thumbnails. Let’s make yours click-worthy today.
+                <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Hi, I’m Meet Thummar 👋<br>
+                    A passionate YouTube thumbnail designer helping creators grow faster with high-CTR visuals. Let’s make your videos impossible to scroll past.
                 </p>
-                <a href="mailto:fineprinthq@gmail.com" class="cta-button inline-block mt-8 text-white font-bold py-4 px-10 text-lg rounded-full">
+            </div>
+        </section>
+
+        <section id="contact" class="py-24">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-extrabold">Ready to Level Up Your Thumbnails?</h2>
+                <p class="mt-4 text-lg text-gray-300">Stop losing views to boring thumbnails. Let’s make yours click-worthy today.</p>
+                <a href="https://wa.me/917574006566?text=Hello%20Meet,%20I%20want%20to%20try%20the%20free%20sample%20thumbnail." target="_blank" class="standout-cta cta-button inline-block mt-8 text-white font-bold py-4 px-10 text-lg rounded-full">
                     Get Your Free Sample
                 </a>
-                <p class="mt-8 text-gray-400">Or contact me directly:</p>
-                <div class="flex justify-center space-x-6 mt-4">
-                    <a href="https://wa.me/917574006566" target="_blank" class="text-gray-400 hover:text-white" title="WhatsApp"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
-                    <a href="https://instagram.com/yourprofile" target="_blank" class="text-gray-400 hover:text-white" title="Instagram"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
-                    <a href="mailto:fineprinthq@gmail.com" class="text-gray-400 hover:text-white" title="Email"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">...</svg></a>
-                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center py-6">
-        <p class="text-gray-500">&copy; 2025 Meet Thummar. All Rights Reserved.</p>
+    <footer class="text-center py-6 border-t border-white/10">
+        <p class="text-gray-400">&copy; 2025 Made by Meet</p>
+        <p class="text-gray-500 text-sm mt-2">Designed & Built by Meet Thummar</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="https://wa.me/917574006566" target="_blank" class="text-gray-400 hover:text-white" title="WhatsApp">...</a>
+            <a href="https://instagram.com/yourprofile" target="_blank" class="text-gray-400 hover:text-white" title="Instagram">...</a>
+            <a href="mailto:fineprinthq@gmail.com" class="text-gray-400 hover:text-white" title="Email">...</a>
+        </div>
     </footer>
 
-    <!-- Floating CTA Bar -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 z-50 glass-card rounded-none border-t-0 border-l-0 border-r-0">
-        <div class="max-w-6xl mx-auto flex justify-center items-center">
-            <p class="hidden md:block text-white mr-6">Ready to boost your CTR?</p>
-            <a href="#contact" class="cta-button text-white font-bold py-3 px-8 text-md rounded-full">
-                Get Your Free Sample
-            </a>
-        </div>
+    <div class="fixed bottom-0 left-0 right-0 p-4 z-40 glass-card rounded-none border-t-0 border-l-0 border-r-0">
+        <div class="max-w-6xl mx-auto flex justify-center items-center"><p class="hidden md:block text-white mr-6">Ready to boost your CTR?</p><a href="https://wa.me/917574006566?text=Hello%20Meet,%20I%20want%20to%20try%20the%20free%20sample%20thumbnail." target="_blank" class="standout-cta cta-button text-white font-bold py-3 px-8 text-md rounded-full">Get Your Free Sample</a></div>
     </div>
 
-    <!-- Sticky WhatsApp Quick Contact -->
-    <a href="https://wa.me/917574006566" target="_blank" class="fixed bottom-24 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 transition-transform hover:scale-110">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-    </a>
+    <a href="https://wa.me/917574006566" target="_blank" class="fixed bottom-24 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 transition-transform hover:scale-110"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -345,6 +242,22 @@
                 handle.addEventListener('touchstart', startDrag);
                 document.addEventListener('touchend', stopDrag);
                 document.addEventListener('touchmove', onDrag);
+            });
+
+            const menuBtn = document.getElementById('menu-btn');
+            const menu = document.getElementById('menu');
+            menuBtn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                menu.classList.toggle('flex');
+            });
+
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.classList.add('glass-card');
+                } else {
+                    header.classList.remove('glass-card');
+                }
             });
         });
     </script>
