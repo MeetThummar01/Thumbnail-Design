@@ -60,6 +60,7 @@
             box-shadow: 0 8px 25px rgba(65, 105, 225, 0.5);
         }
         
+        /* 5. Standout CTA */
         .standout-cta {
             background: linear-gradient(90deg, #22c55e, #16a34a);
             box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
@@ -72,6 +73,7 @@
              background: linear-gradient(90deg, #434343, #000000);
         }
 
+        /* 3. Pricing Badges */
         .pricing-badge {
             position: absolute;
             top: 0;
@@ -86,6 +88,7 @@
         .badge-popular { background: #8A2BE2; box-shadow: 0 0 15px 2px rgba(138, 43, 226, 0.6); }
         .badge-value { background: #ef4444; box-shadow: 0 0 15px 2px rgba(239, 68, 68, 0.6); }
 
+        /* Image Comparison Slider Styles */
         .comparison-slider { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 0.5rem; border: 2px solid rgba(255, 255, 255, 0.2); }
         .comparison-slider img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
         .comparison-slider .after-image { clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%); }
@@ -95,6 +98,7 @@
 </head>
 <body class="antialiased">
 
+    <!-- 6. Navigation -->
     <header id="header" class="py-4 px-6 md:px-12 sticky top-0 z-50 transition-all duration-300">
         <nav class="flex justify-between items-center">
             <a href="#home" class="text-3xl font-bold text-white tracking-wider">Made by Meet</a>
@@ -105,12 +109,14 @@
                 <a href="#testimonials" class="hover:text-cyan-400">Testimonials</a>
                 <a href="#contact" class="cta-button text-white font-semibold py-2 px-6 rounded-full">Contact</a>
             </div>
+            <!-- Mobile Menu Button -->
             <div class="md:hidden">
                 <button id="menu-btn" class="text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </nav>
+        <!-- Mobile Menu -->
         <div id="menu" class="hidden md:hidden flex-col items-center space-y-4 mt-4 glass-card p-6">
             <a href="#home" class="block text-white hover:text-cyan-400">Home</a>
             <a href="#pricing" class="block text-white hover:text-cyan-400">Pricing</a>
@@ -121,6 +127,7 @@
     </header>
 
     <main>
+        <!-- 2. Hero Section -->
         <section id="home" class="text-center pt-16 pb-24 px-4">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl md:text-7xl font-black text-white leading-tight uppercase">
@@ -136,6 +143,7 @@
                     Or claim your free sample →
                 </a>
             </div>
+            <!-- Thumbnail Collage with Lazy Loading -->
             <div class="mt-20 max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
                 <img loading="lazy" src="https://placehold.co/1280x720/1a1a2a/ffffff?text=Style+1" alt="Thumbnail example 1" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 hover:shadow-cyan-400/30">
                 <img loading="lazy" src="https://placehold.co/1280x720/2d3748/ffffff?text=Style+2" alt="Thumbnail example 2" class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 mt-8 hover:shadow-blue-400/30">
@@ -144,6 +152,7 @@
             </div>
         </section>
 
+        <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">The Transformation</h2>
@@ -154,6 +163,7 @@
             </div>
         </section>
 
+        <!-- 3. Pricing Section -->
         <section id="pricing" class="py-24">
             <div class="max-w-6xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">Simple, Transparent Pricing</h2>
@@ -165,6 +175,7 @@
             </div>
         </section>
 
+        <!-- 4. Testimonials -->
         <section id="testimonials" class="py-24">
             <div class="max-w-4xl mx-auto px-4">
                 <h2 class="text-4xl font-bold text-center text-white mb-12">What Creators Are Saying</h2>
@@ -181,6 +192,7 @@
             </div>
         </section>
 
+        <!-- 7. About Section -->
         <section id="about-me" class="py-24">
             <div class="max-w-4xl mx-auto px-4 text-center glass-card p-12">
                 <h2 class="text-3xl font-bold text-white mb-4">About Me</h2>
@@ -191,6 +203,7 @@
             </div>
         </section>
 
+        <!-- 5. Call to Action Section -->
         <section id="contact" class="py-24">
             <div class="max-w-4xl mx-auto px-4 text-center">
                 <h2 class="text-4xl md:text-5xl font-extrabold">Ready to Level Up Your Thumbnails?</h2>
@@ -202,6 +215,7 @@
         </section>
     </main>
 
+    <!-- 8. Footer -->
     <footer class="text-center py-6 border-t border-white/10">
         <p class="text-gray-400">&copy; 2025 Made by Meet</p>
         <p class="text-gray-500 text-sm mt-2">Designed & Built by Meet Thummar</p>
@@ -212,10 +226,12 @@
         </div>
     </footer>
 
+    <!-- Floating CTA Bar -->
     <div class="fixed bottom-0 left-0 right-0 p-4 z-40 glass-card rounded-none border-t-0 border-l-0 border-r-0">
         <div class="max-w-6xl mx-auto flex justify-center items-center"><p class="hidden md:block text-white mr-6">Ready to boost your CTR?</p><a href="https://wa.me/917574006566?text=Hello%20Meet,%20I%20want%20to%20try%20the%20free%20sample%20thumbnail." target="_blank" class="standout-cta cta-button text-white font-bold py-3 px-8 text-md rounded-full">Get Your Free Sample</a></div>
     </div>
 
+    <!-- Sticky WhatsApp Quick Contact -->
     <a href="https://wa.me/917574006566" target="_blank" class="fixed bottom-24 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 z-50 transition-transform hover:scale-110"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></a>
 
     <script>
